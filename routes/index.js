@@ -18,20 +18,20 @@ router.get("/:a/:b", (req, res) => {
 });
 module.exports = router;
 */
-const router = require("express").Router();
-const bookRouter = require("./book.route");
-const blogsRouter = require("./blogs.route");
-const rolesRouter = require("./roles.route");
-const categoriesRouter = require("./categories.route");
+// const router = require("express").Router();
+// const bookRouter = require("./book.route");
+// const blogsRouter = require("./blogs.route");
+// const rolesRouter = require("./roles.route");
+// const categoriesRouter = require("./categories.route");
 const userRouter = require("./user.route");
 
 router.get("/", (req, res) => {
   res.json({ msg: "Hello from index" });
 });
 
-router.use("/books", bookRouter);
-router.use("/blogs", blogsRouter);
-router.use("/roles", rolesRouter);
-router.use("/categories", categoriesRouter);
+// router.use("/books", bookRouter);
+// router.use("/blogs", blogsRouter);
+// router.use("/roles", rolesRouter);
+// router.use("/categories", categoriesRouter);
 router.use("/users", userRouter);
 module.exports = router;
